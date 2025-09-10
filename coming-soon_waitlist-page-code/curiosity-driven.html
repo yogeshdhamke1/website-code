@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Coming Will Change Everything – Stay Tuned!</title>
+    <meta name="description" content="Something mysterious is coming. Join the curious minds waiting for the big reveal. What could it be?">
+    <meta name="keywords" content="mystery, curiosity, reveal, coming soon, cryptic, exclusive preview">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #0a0a0a;
+            min-height: 100vh;
+            color: #00ff41;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .matrix-char {
+            position: absolute;
+            color: #00ff41;
+            font-family: 'Roboto Mono', monospace;
+            animation: matrix-fall linear infinite;
+        }
+
+        @keyframes matrix-fall {
+            0% { transform: translateY(-100vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #00ff41;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(0, 255, 65, 0.1);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+
+        .mystery-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            animation: mystery-pulse 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px #00ff41);
+        }
+
+        @keyframes mystery-pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            50% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px #00ff41;
+            animation: text-flicker 4s infinite;
+        }
+
+        @keyframes text-flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+            75% { opacity: 0.9; }
+        }
+
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            animation: glitch-1 2s infinite;
+            color: #ff0040;
+            z-index: -1;
+        }
+
+        .glitch::after {
+            animation: glitch-2 2s infinite;
+            color: #00ffff;
+            z-index: -2;
+        }
+
+        @keyframes glitch-1 {
+            0%, 14%, 15%, 49%, 50%, 99%, 100% { transform: translate(0); }
+            15%, 49% { transform: translate(-2px, 2px); }
+        }
+
+        @keyframes glitch-2 {
+            0%, 20%, 21%, 62%, 63%, 99%, 100% { transform: translate(0); }
+            21%, 62% { transform: translate(2px, -2px); }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            color: #cccccc;
+        }
+
+        .countdown-section {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .countdown-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+            animation: scan-line 3s infinite;
+        }
+
+        @keyframes scan-line {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .countdown-title {
+            font-size: 1.2rem;
+            color: #00ff41;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .countdown-item {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ff41;
+            border-radius: 10px;
+            padding: 1.5rem 1rem;
+            min-width: 80px;
+            position: relative;
+        }
+
+        .countdown-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #00ff41;
+            border-radius: 10px;
+            animation: border-glow 2s infinite alternate;
+        }
+
+        @keyframes border-glow {
+            0% { box-shadow: 0 0 5px #00ff41; }
+            100% { box-shadow: 0 0 20px #00ff41; }
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00ff41;
+            display: block;
+            text-shadow: 0 0 10px #00ff41;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        .mystery-form {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff41;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            color: #00ff41;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 18px 25px;
+            border: 1px solid #00ff41;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ff41;
+            font-size: 1rem;
+            outline: none;
+            font-family: 'Roboto Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+        input[type="email"]:focus {
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+            background: rgba(0, 255, 65, 0.05);
+        }
+
+        input[type="email"]::placeholder {
+            color: rgba(0, 255, 65, 0.6);
+        }
+
+        .mystery-btn {
+            padding: 18px 35px;
+            background: transparent;
+            border: 2px solid #00ff41;
+            border-radius: 5px;
+            color: #00ff41;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .mystery-btn:hover {
+            background: #00ff41;
+            color: #000;
+            box-shadow: 0 0 30px #00ff41;
+        }
+
+        .curious-count {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff41;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .curious-count h3 {
+            color: #00ff41;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .count-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00ff41;
+            text-shadow: 0 0 20px #00ff41;
+            animation: count-glow 2s infinite alternate;
+        }
+
+        @keyframes count-glow {
+            0% { text-shadow: 0 0 20px #00ff41; }
+            100% { text-shadow: 0 0 40px #00ff41, 0 0 60px #00ff41; }
+        }
+
+        .referral-section {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff41;
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .referral-section h3 {
+            color: #00ff41;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .terminal-text {
+            font-family: 'Roboto Mono', monospace;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .mystery-icon {
+                font-size: 3rem;
+            }
+            
+            .countdown {
+                gap: 1rem;
+            }
+            
+            .countdown-item {
+                min-width: 60px;
+                padding: 1rem 0.5rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .form-group {
+                flex-direction: column;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg" id="matrix-bg"></div>
+    <a href="index.html" class="back-btn">← Back to Styles</a>
+    
+    <div class="container">
+        <div class="mystery-icon">🔮</div>
+        
+        <h1>
+            <span class="glitch" data-text="What's Coming Will Change Everything">
+                What's Coming Will Change Everything
+            </span>
+        </h1>
+        <p class="subtitle">Stay Tuned!</p>
+        
+        <div class="countdown-section">
+            <div class="countdown-title">Something Unexpected Arrives In</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">??</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">??</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">??</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">??</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mystery-form">
+            <div class="form-title">Be the First to Know</div>
+            <form class="form-group">
+                <input type="email" placeholder="Enter your email if you dare..." required>
+                <button type="submit" class="mystery-btn">Reveal</button>
+            </form>
+            <p class="terminal-text">// Access granted to curious minds only</p>
+        </div>
+        
+        <div class="curious-count">
+            <h3>Curious Minds Waiting</h3>
+            <div class="count-number" id="curious-counter">1,000</div>
+            <p class="terminal-text">+ other curious people waiting for the reveal!</p>
+        </div>
+        
+        <div class="referral-section">
+            <h3>🔓 Unlock Preview</h3>
+            <p class="terminal-text">Want to unlock an exclusive preview? Share with 3 friends and gain access to classified information...</p>
+        </div>
+    </div>
+
+    <script>
+        // Create matrix effect
+        function createMatrix() {
+            const matrixBg = document.getElementById('matrix-bg');
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            for (let i = 0; i < 50; i++) {
+                const char = document.createElement('div');
+                char.className = 'matrix-char';
+                char.textContent = chars[Math.floor(Math.random() * chars.length)];
+                char.style.left = Math.random() * 100 + '%';
+                char.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                char.style.animationDelay = Math.random() * 2 + 's';
+                char.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                matrixBg.appendChild(char);
+            }
+        }
+        
+        // Mysterious countdown with random reveals
+        let revealedCount = 0;
+        const totalReveals = 4;
+        
+        function updateCountdown() {
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 13);
+            launchDate.setHours(launchDate.getHours() + 7);
+            launchDate.setMinutes(launchDate.getMinutes() + 33);
+            
+            const now = new Date().getTime();
+            const distance = launchDate.getTime() - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Randomly reveal countdown numbers
+            if (Math.random() < 0.1 && revealedCount < totalReveals) {
+                const elements = ['days', 'hours', 'minutes', 'seconds'];
+                const values = [days, hours, minutes, seconds];
+                const randomIndex = Math.floor(Math.random() * elements.length);
+                
+                if (document.getElementById(elements[randomIndex]).textContent === '??') {
+                    document.getElementById(elements[randomIndex]).textContent = 
+                        values[randomIndex].toString().padStart(2, '0');
+                    revealedCount++;
+                }
+            }
+        }
+        
+        // Animate curious counter
+        function animateCuriousCounter() {
+            const counter = document.getElementById('curious-counter');
+            let count = 1000;
+            
+            setInterval(() => {
+                if (Math.random() < 0.3) {
+                    count += Math.floor(Math.random() * 5) + 1;
+                    counter.textContent = count.toLocaleString();
+                }
+            }, 3000);
+        }
+        
+        createMatrix();
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        animateCuriousCounter();
+        
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Access granted. You will be contacted when the time is right...');
+        });
+    </script>
+</body>
+</html>

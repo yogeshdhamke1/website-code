@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big things are coming. Stay tuned.</title>
+    <meta name="description" content="Something big is coming. Clean, minimal design focused on what matters most. Get notified when we launch.">
+    <meta name="keywords" content="minimalist, clean design, coming soon, simple, elegant, launch notification">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+            min-height: 100vh;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: #7f8c8d;
+            text-decoration: none;
+            padding: 12px 24px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-btn:hover {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            margin: 0 auto 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            letter-spacing: -1px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+
+        .countdown-container {
+            margin-bottom: 4rem;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: #95a5a6;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            display: block;
+            line-height: 1;
+        }
+
+        .countdown-text {
+            font-size: 0.8rem;
+            color: #95a5a6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        .email-section {
+            margin-bottom: 4rem;
+        }
+
+        .email-title {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto 1rem;
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 16px 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 50px;
+            background: white;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            color: #2c3e50;
+        }
+
+        input[type="email"]:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        input[type="email"]::placeholder {
+            color: #bdc3c7;
+        }
+
+        .submit-btn {
+            padding: 16px 32px;
+            background: #2c3e50;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .submit-btn:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+        }
+
+        .subscriber-count {
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .social-proof {
+            margin-bottom: 3rem;
+        }
+
+        .testimonial {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #667eea;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .referral-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .referral-title {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .referral-text {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 3rem auto;
+            border-radius: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .countdown {
+                gap: 2rem;
+            }
+            
+            .countdown-number {
+                font-size: 2.5rem;
+            }
+            
+            .email-form {
+                flex-direction: column;
+                max-width: 100%;
+            }
+            
+            .submit-btn {
+                width: 100%;
+            }
+            
+            .back-btn {
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .countdown {
+                gap: 1.5rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back to Styles</a>
+    
+    <div class="container">
+        <div class="logo">✨</div>
+        
+        <h1><span class="highlight">Big things</span> are coming.</h1>
+        <p class="subtitle">Stay tuned.</p>
+        
+        <div class="countdown-container">
+            <div class="countdown-label">Launching in</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">07</span>
+                    <span class="countdown-text">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">18</span>
+                    <span class="countdown-text">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">24</span>
+                    <span class="countdown-text">Minutes</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="email-section">
+            <div class="email-title">Get notified the second we launch</div>
+            <form class="email-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="submit-btn">Notify Me</button>
+            </form>
+            <p class="subscriber-count">Join 1,247 others waiting</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="social-proof">
+            <div class="testimonial">
+                <div class="testimonial-text">"Clean, elegant, and exactly what we need. Can't wait to see what's coming."</div>
+                <div class="testimonial-author">— Sarah Chen, Design Lead</div>
+            </div>
+        </div>
+        
+        <div class="referral-section">
+            <div class="referral-title">🎁 Refer a friend</div>
+            <div class="referral-text">Refer a friend and unlock a special gift when we launch.</div>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7);
+            launchDate.setHours(launchDate.getHours() + 18);
+            launchDate.setMinutes(launchDate.getMinutes() + 24);
+            
+            const now = new Date().getTime();
+            const distance = launchDate.getTime() - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! You\'ll be the first to know when we launch.');
+        });
+    </script>
+</body>
+</html>

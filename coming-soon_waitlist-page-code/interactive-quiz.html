@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Ready for the Future of Technology?</title>
+    <meta name="description" content="Take our interactive quiz to discover if you're ready for the future. Get personalized early access based on your results!">
+    <meta name="keywords" content="interactive quiz, future technology, personalized access, assessment, early access code">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .quiz-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: quiz-bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes quiz-bounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .countdown-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .countdown-title {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #fecfef;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 1.5rem 1rem;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            color: #ff9a9e;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .quiz-progress {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            height: 8px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .quiz-progress-fill {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            height: 100%;
+            width: 0%;
+            border-radius: 25px;
+            transition: width 0.5s ease;
+        }
+
+        .question {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .question.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #fecfef;
+        }
+
+        .options {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .option:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #ff9a9e;
+            transform: translateY(-2px);
+        }
+
+        .option.selected {
+            background: rgba(255, 154, 158, 0.3);
+            border-color: #ff9a9e;
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quiz-btn {
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            border: none;
+            border-radius: 50px;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .quiz-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 154, 158, 0.4);
+        }
+
+        .quiz-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .quiz-results {
+            display: none;
+            text-align: center;
+        }
+
+        .results-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        .results-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fecfef;
+        }
+
+        .results-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .access-code {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #ff9a9e;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .access-code h4 {
+            color: #ff9a9e;
+            margin-bottom: 1rem;
+        }
+
+        .code-display {
+            font-family: 'Courier New', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fecfef;
+            letter-spacing: 3px;
+        }
+
+        .email-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input[type="email"]:focus {
+            border-color: #ff9a9e;
+        }
+
+        input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .live-feed {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .live-feed h3 {
+            color: #fecfef;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .live-indicator {
+            width: 10px;
+            height: 10px;
+            background: #ff4757;
+            border-radius: 50%;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .feed-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid #ff9a9e;
+        }
+
+        .feed-time {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .countdown {
+                gap: 1rem;
+            }
+            
+            .countdown-item {
+                min-width: 60px;
+                padding: 1rem 0.5rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .email-form {
+                flex-direction: column;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back to Styles</a>
+    
+    <div class="container">
+        <div class="quiz-header">
+            <div class="quiz-icon">🧠</div>
+            <h1>Are You Ready for the Future?</h1>
+            <p class="subtitle">Take our quiz to discover your readiness level and unlock personalized access</p>
+        </div>
+        
+        <div class="countdown-section">
+            <div class="countdown-title">Quiz results unlock full access in</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">30</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">12</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">45</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">30</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quiz-container">
+            <div class="quiz-progress">
+                <div class="quiz-progress-fill" id="progress-fill"></div>
+            </div>
+            
+            <div class="question active" data-question="1">
+                <h3>How do you typically adapt to new technology?</h3>
+                <div class="options">
+                    <div class="option" data-value="early">🚀 I'm always first to try new tech</div>
+                    <div class="option" data-value="moderate">⚡ I adopt after seeing others use it</div>
+                    <div class="option" data-value="cautious">🤔 I prefer to wait and see</div>
+                    <div class="option" data-value="resistant">🐌 I stick with what I know</div>
+                </div>
+            </div>
+            
+            <div class="question" data-question="2">
+                <h3>What excites you most about future technology?</h3>
+                <div class="options">
+                    <div class="option" data-value="ai">🤖 Artificial Intelligence & Automation</div>
+                    <div class="option" data-value="vr">🥽 Virtual & Augmented Reality</div>
+                    <div class="option" data-value="iot">🌐 Internet of Things & Smart Devices</div>
+                    <div class="option" data-value="bio">🧬 Biotechnology & Health Innovation</div>
+                </div>
+            </div>
+            
+            <div class="question" data-question="3">
+                <h3>How do you prefer to learn about new products?</h3>
+                <div class="options">
+                    <div class="option" data-value="hands-on">🛠️ Hands-on experimentation</div>
+                    <div class="option" data-value="video">📹 Video tutorials and demos</div>
+                    <div class="option" data-value="reading">📚 Detailed documentation</div>
+                    <div class="option" data-value="community">👥 Community discussions</div>
+                </div>
+            </div>
+            
+            <div class="quiz-nav">
+                <button class="quiz-btn" id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                <span id="question-counter">1 of 3</span>
+                <button class="quiz-btn" id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+            </div>
+            
+            <div class="quiz-results" id="quiz-results">
+                <div class="results-icon">🎯</div>
+                <div class="results-title">Future-Ready Pioneer!</div>
+                <div class="results-description">
+                    Based on your answers, you're perfectly positioned for what's coming next.
+                </div>
+                
+                <div class="access-code">
+                    <h4>Your Personalized Early Access Code:</h4>
+                    <div class="code-display" id="access-code">FUTURE-2024-VIP</div>
+                </div>
+                
+                <div class="email-section">
+                    <h4 style="margin-bottom: 1rem; color: #fecfef;">Get Your Personalized Access</h4>
+                    <form class="email-form">
+                        <input type="email" placeholder="Enter your email for personalized access" required>
+                        <button type="submit" class="quiz-btn">Get Access</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="live-feed">
+            <h3>
+                <span class="live-indicator"></span>
+                Live Feed - Who's Joining
+            </h3>
+            <div class="feed-item">
+                <div class="feed-time">2 minutes ago</div>
+                <div>🎯 Alex M. completed the quiz - Future Pioneer level!</div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-time">5 minutes ago</div>
+                <div>⚡ Sarah K. joined the waitlist - Tech Enthusiast level</div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-time">8 minutes ago</div>
+                <div>🚀 Mike R. unlocked early access - Innovation Leader level</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 3;
+        let answers = {};
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 30);
+            launchDate.setHours(launchDate.getHours() + 12);
+            launchDate.setMinutes(launchDate.getMinutes() + 45);
+            
+            const now = new Date().getTime();
+            const distance = launchDate.getTime() - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Quiz functionality
+        function updateProgress() {
+            const progress = (currentQuestion / totalQuestions) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+        }
+        
+        function updateQuestionCounter() {
+            document.getElementById('question-counter').textContent = `${currentQuestion} of ${totalQuestions}`;
+        }
+        
+        function showQuestion(questionNum) {
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+            document.querySelector(`[data-question="${questionNum}"]`).classList.add('active');
+            
+            updateProgress();
+            updateQuestionCounter();
+            
+            // Update navigation buttons
+            document.getElementById('prev-btn').disabled = questionNum === 1;
+            document.getElementById('next-btn').disabled = !answers[questionNum];
+            
+            if (questionNum === totalQuestions && answers[questionNum]) {
+                document.getElementById('next-btn').textContent = 'See Results';
+            } else {
+                document.getElementById('next-btn').textContent = 'Next';
+            }
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < totalQuestions) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+            } else {
+                showResults();
+            }
+        }
+        
+        function previousQuestion() {
+            if (currentQuestion > 1) {
+                currentQuestion--;
+                showQuestion(currentQuestion);
+            }
+        }
+        
+        function showResults() {
+            document.querySelector('.quiz-container .quiz-progress').style.display = 'none';
+            document.querySelectorAll('.question').forEach(q => q.style.display = 'none');
+            document.querySelector('.quiz-nav').style.display = 'none';
+            document.getElementById('quiz-results').style.display = 'block';
+            
+            // Generate personalized results based on answers
+            const resultTypes = {
+                'early-ai-hands-on': { title: 'Innovation Pioneer', code: 'PIONEER-2024-AI', icon: '🚀' },
+                'early-vr-video': { title: 'Future Visionary', code: 'VISION-2024-VR', icon: '🥽' },
+                'moderate-iot-community': { title: 'Tech Enthusiast', code: 'TECH-2024-IOT', icon: '⚡' },
+                'default': { title: 'Future-Ready Explorer', code: 'FUTURE-2024-VIP', icon: '🎯' }
+            };
+            
+            const answerKey = Object.values(answers).join('-');
+            const result = resultTypes[answerKey] || resultTypes['default'];
+            
+            document.querySelector('.results-title').textContent = result.title;
+            document.querySelector('.results-icon').textContent = result.icon;
+            document.getElementById('access-code').textContent = result.code;
+        }
+        
+        // Add event listeners to options
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const question = this.closest('.question');
+                const questionNum = parseInt(question.dataset.question);
+                
+                // Remove previous selection
+                question.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                
+                // Add selection to clicked option
+                this.classList.add('selected');
+                
+                // Store answer
+                answers[questionNum] = this.dataset.value;
+                
+                // Enable next button
+                document.getElementById('next-btn').disabled = false;
+                
+                if (questionNum === totalQuestions) {
+                    document.getElementById('next-btn').textContent = 'See Results';
+                }
+            });
+        });
+        
+        // Live feed animation
+        function updateLiveFeed() {
+            const names = ['Alex M.', 'Sarah K.', 'Mike R.', 'Emma L.', 'John D.', 'Lisa P.'];
+            const levels = ['Future Pioneer', 'Tech Enthusiast', 'Innovation Leader', 'Digital Native'];
+            const actions = ['completed the quiz', 'joined the waitlist', 'unlocked early access'];
+            
+            const feedItems = document.querySelectorAll('.feed-item');
+            
+            setInterval(() => {
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                const randomLevel = levels[Math.floor(Math.random() * levels.length)];
+                const randomAction = actions[Math.floor(Math.random() * actions.length)];
+                
+                // Update the first feed item
+                feedItems[0].innerHTML = `
+                    <div class="feed-time">Just now</div>
+                    <div>🎯 ${randomName} ${randomAction} - ${randomLevel} level!</div>
+                `;
+                
+                // Move other items down
+                for (let i = feedItems.length - 1; i > 0; i--) {
+                    feedItems[i].innerHTML = feedItems[i - 1].innerHTML;
+                    const timeElement = feedItems[i].querySelector('.feed-time');
+                    if (timeElement) {
+                        const currentTime = timeElement.textContent;
+                        if (currentTime === 'Just now') {
+                            timeElement.textContent = '2 minutes ago';
+                        } else if (currentTime === '2 minutes ago') {
+                            timeElement.textContent = '5 minutes ago';
+                        } else if (currentTime === '5 minutes ago') {
+                            timeElement.textContent = '8 minutes ago';
+                        }
+                    }
+                }
+            }, 8000);
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        updateLiveFeed();
+        
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('🎉 Congratulations! Your personalized access code has been sent to your email.');
+        });
+    </script>
+</body>
+</html>

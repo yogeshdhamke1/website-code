@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon & Waitlist Landing Pages - 8 Styles</title>
+    <meta name="description" content="Explore 8 different coming soon and waitlist landing page styles with modern UI/UX design">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coming Soon & Waitlist Pages</h1>
+        <p class="subtitle">Choose from 8 different styles - All SEO optimized & mobile responsive</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Classic Countdown</h3>
+                <p>Traditional countdown timer with teaser headline and early access signup</p>
+                <a href="classic-countdown.html" class="btn">View Style</a>
+            </div>
+            
+            <div class="card">
+                <h3>VIP Access</h3>
+                <p>Exclusive VIP theme with limited spots and special member benefits</p>
+                <a href="vip-access.html" class="btn">View Style</a>
+            </div>
+            
+            <div class="card">
+                <h3>Sneak Peek</h3>
+                <p>Preview-focused design with behind-the-scenes content and features</p>
+                <a href="sneak-peek.html" class="btn">View Style</a>
+            </div>
+            
+            <div class="card">
+                <h3>Animated Launch</h3>
+                <p>Dynamic animations with rocket countdown and interactive elements</p>
+                <a href="animated-launch.html" class="btn">View Style</a>
+            </div>
+            
+            <div class="card">
+                <h3>Gamified Waitlist</h3>
+                <p>Points system with leaderboard and reward-based referral program</p>
+                <a href="gamified-waitlist.html" class="btn">View Style</a>
+            </div>
+            
+            <div class="card">
+                <h3>Minimalist</h3>
+                <p>Clean, focused design with subtle countdown and product emphasis</p>
+                <a href="minimalist.html" class="btn">View Style</a>
+            </div>
+            
+            <div class="card">
+                <h3>Curiosity Driven</h3>
+                <p>Mystery-focused approach with cryptic countdown and intrigue</p>
+                <a href="curiosity-driven.html" class="btn">View Style</a>
+            </div>
+            
+            <div class="card">
+                <h3>Interactive Quiz</h3>
+                <p>Engaging quiz format with personalized access codes and live feed</p>
+                <a href="interactive-quiz.html" class="btn">View Style</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
