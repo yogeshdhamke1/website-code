@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectricPro - Professional Electrical Services</title>
+    <meta name="description" content="Professional electrician services for residential and commercial needs. 24/7 emergency electrical repairs, installations, and maintenance.">
+    <meta name="keywords" content="electrician, electrical services, electrical repair, installation, emergency electrician, licensed electrician">
+    <meta name="author" content="ElectricPro">
+    <meta property="og:title" content="ElectricPro - Professional Electrical Services">
+    <meta property="og:description" content="Professional electrician services for residential and commercial needs.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" class="logo-svg">
+                        <circle cx="20" cy="20" r="18" fill="#dc2626"/>
+                        <path d="M15 15 L25 15 M15 20 L25 20 M15 25 L25 25" stroke="#fff" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+                    </svg>
+                    <span class="logo-text">ElectricPro</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><button class="theme-toggle" id="themeToggle">
+                        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+                        </svg>
+                        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                            <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+                        </svg>
+                    </button></li>
+                    <li><a href="tel:+1234567890" class="nav-link nav-phone">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Call Now
+                    </a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in">
+                    <h1>Professional Electrical Services</h1>
+                    <p>Reliable, Safe & Certified Electricians at Your Service</p>
+                    <div class="hero-buttons">
+                        <a href="tel:+1234567890" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            Call Now
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Get Quote</a>
+                    </div>
+                </div>
+                <div class="hero-image animate-slide-in">
+                    <svg width="400" height="300" viewBox="0 0 400 300" class="hero-svg">
+                        <rect width="400" height="300" fill="#f0f8ff" rx="20"/>
+                        <circle cx="200" cy="150" r="80" fill="#dc2626" opacity="0.1"/>
+                        <path d="M150 100 L250 100 L250 200 L150 200 Z" fill="#0ea5e9" opacity="0.8"/>
+                        <path d="M180 120 L220 120 M180 140 L220 140 M180 160 L220 160" stroke="#fff" stroke-width="3"/>
+                        <circle cx="200" cy="80" r="15" fill="#dc2626"/>
+                        <path d="M190 70 L210 70 M200 60 L200 90" stroke="#fff" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="#dc2626">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Electrical Repairs</h3>
+                        <p>Quick and reliable electrical repair services for homes and businesses.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="#0ea5e9">
+                                <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.2 3-3.3 3-5.7 0-3.9-3.1-7-7-7z"/>
+                            </svg>
+                        </div>
+                        <h3>Installation</h3>
+                        <p>Professional installation of lighting, outlets, and electrical systems.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="#dc2626">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3>Safety Inspections</h3>
+                        <p>Comprehensive electrical safety inspections and code compliance.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="#0ea5e9">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Emergency Service</h3>
+                        <p>24/7 emergency electrical services for urgent repairs and issues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Company Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">About ElectricPro</h2>
+                <div class="about-content">
+                    <div class="about-text animate-on-scroll">
+                        <h3>Your Trusted Electrical Partner Since 2008</h3>
+                        <p>ElectricPro has been serving residential and commercial clients with exceptional electrical services for over 15 years. Founded by Master Electrician John Smith, our company has grown from a small local business to the region's most trusted electrical contractor.</p>
+                        <p>We specialize in providing safe, reliable, and code-compliant electrical solutions. Our team of certified electricians brings decades of combined experience to every project, ensuring quality workmanship and customer satisfaction.</p>
+                        <div class="company-stats">
+                            <div class="stat">
+                                <h4>500+</h4>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat">
+                                <h4>15+</h4>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="stat">
+                                <h4>24/7</h4>
+                                <p>Emergency Service</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image animate-on-scroll">
+                        <svg width="400" height="300" viewBox="0 0 400 300">
+                            <rect width="400" height="300" fill="var(--card-bg)" rx="15"/>
+                            <rect x="50" y="50" width="300" height="200" fill="#0ea5e9" opacity="0.8" rx="10"/>
+                            <circle cx="200" cy="150" r="60" fill="#dc2626" opacity="0.9"/>
+                            <path d="M170 130 L230 130 M170 150 L230 150 M170 170 L230 170" stroke="#fff" stroke-width="4"/>
+                            <circle cx="200" cy="150" r="25" fill="#fff"/>
+                            <text x="200" y="280" text-anchor="middle" fill="var(--text-color)" font-size="16" font-weight="bold">Professional Excellence</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team" id="team">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Our Professional Team</h2>
+                <div class="team-grid">
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <svg width="150" height="150" viewBox="0 0 150 150">
+                                <circle cx="75" cy="75" r="70" fill="#dc2626"/>
+                                <circle cx="75" cy="60" r="25" fill="#fff"/>
+                                <path d="M35 120 Q75 100 115 120" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <h3>John Smith</h3>
+                        <p class="role">Master Electrician & Founder</p>
+                        <p>15+ years experience, Licensed Master Electrician specializing in residential and commercial electrical systems.</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <svg width="150" height="150" viewBox="0 0 150 150">
+                                <circle cx="75" cy="75" r="70" fill="#0ea5e9"/>
+                                <circle cx="75" cy="60" r="25" fill="#fff"/>
+                                <path d="M35 120 Q75 100 115 120" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <h3>Mike Johnson</h3>
+                        <p class="role">Senior Electrician</p>
+                        <p>12+ years experience in industrial and commercial electrical installations, safety inspections specialist.</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <svg width="150" height="150" viewBox="0 0 150 150">
+                                <circle cx="75" cy="75" r="70" fill="#dc2626"/>
+                                <circle cx="75" cy="60" r="25" fill="#fff"/>
+                                <path d="M35 120 Q75 100 115 120" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <h3>Sarah Davis</h3>
+                        <p class="role">Licensed Electrician</p>
+                        <p>8+ years experience, expert in smart home installations and energy-efficient electrical solutions.</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <svg width="150" height="150" viewBox="0 0 150 150">
+                                <circle cx="75" cy="75" r="70" fill="#0ea5e9"/>
+                                <circle cx="75" cy="60" r="25" fill="#fff"/>
+                                <path d="M35 120 Q75 100 115 120" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <h3>Tom Wilson</h3>
+                        <p class="role">Apprentice Electrician</p>
+                        <p>3+ years experience, specializing in residential wiring and electrical troubleshooting under supervision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Our Work Gallery</h2>
+                <p class="gallery-subtitle animate-on-scroll">See examples of our professional electrical work and installations</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item animate-on-scroll">
+                        <svg width="300" height="200" viewBox="0 0 300 200">
+                            <rect width="300" height="200" fill="#f0f8ff" rx="10"/>
+                            <rect x="20" y="20" width="260" height="160" fill="#0ea5e9" opacity="0.3" rx="5"/>
+                            <circle cx="150" cy="100" r="30" fill="#dc2626"/>
+                            <path d="M130 90 L170 90 M130 110 L170 110" stroke="#fff" stroke-width="3"/>
+                            <text x="150" y="180" text-anchor="middle" fill="#333" font-size="12">Panel Installation</text>
+                        </svg>
+                        <div class="gallery-overlay">
+                            <h4>Electrical Panel Upgrade</h4>
+                            <p>Modern 200A panel installation with safety upgrades</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <svg width="300" height="200" viewBox="0 0 300 200">
+                            <rect width="300" height="200" fill="#f0f8ff" rx="10"/>
+                            <circle cx="80" cy="60" r="15" fill="#dc2626"/>
+                            <circle cx="150" cy="60" r="15" fill="#dc2626"/>
+                            <circle cx="220" cy="60" r="15" fill="#dc2626"/>
+                            <rect x="50" y="120" width="200" height="40" fill="#0ea5e9" opacity="0.7" rx="5"/>
+                            <text x="150" y="180" text-anchor="middle" fill="#333" font-size="12">LED Lighting</text>
+                        </svg>
+                        <div class="gallery-overlay">
+                            <h4>LED Lighting Installation</h4>
+                            <p>Energy-efficient LED lighting for commercial space</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <svg width="300" height="200" viewBox="0 0 300 200">
+                            <rect width="300" height="200" fill="#f0f8ff" rx="10"/>
+                            <rect x="50" y="50" width="200" height="100" fill="#0ea5e9" opacity="0.5" rx="10"/>
+                            <circle cx="100" cy="100" r="20" fill="#dc2626"/>
+                            <circle cx="200" cy="100" r="20" fill="#dc2626"/>
+                            <path d="M120 100 L180 100" stroke="#333" stroke-width="2"/>
+                            <text x="150" y="180" text-anchor="middle" fill="#333" font-size="12">Smart Home Setup</text>
+                        </svg>
+                        <div class="gallery-overlay">
+                            <h4>Smart Home Integration</h4>
+                            <p>Complete smart home electrical system installation</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <svg width="300" height="200" viewBox="0 0 300 200">
+                            <rect width="300" height="200" fill="#f0f8ff" rx="10"/>
+                            <rect x="30" y="30" width="240" height="140" fill="#dc2626" opacity="0.2" rx="5"/>
+                            <circle cx="150" cy="100" r="40" fill="#0ea5e9" opacity="0.8"/>
+                            <path d="M130 85 L170 85 M130 100 L170 100 M130 115 L170 115" stroke="#fff" stroke-width="2"/>
+                            <text x="150" y="180" text-anchor="middle" fill="#333" font-size="12">Industrial Wiring</text>
+                        </svg>
+                        <div class="gallery-overlay">
+                            <h4>Industrial Electrical Work</h4>
+                            <p>Heavy-duty industrial electrical installation</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <svg width="300" height="200" viewBox="0 0 300 200">
+                            <rect width="300" height="200" fill="#f0f8ff" rx="10"/>
+                            <rect x="60" y="40" width="180" height="120" fill="#0ea5e9" opacity="0.4" rx="8"/>
+                            <circle cx="150" cy="100" r="25" fill="#dc2626"/>
+                            <path d="M135 90 L165 90 M135 110 L165 110" stroke="#fff" stroke-width="2"/>
+                            <text x="150" y="180" text-anchor="middle" fill="#333" font-size="12">Outlet Installation</text>
+                        </svg>
+                        <div class="gallery-overlay">
+                            <h4>GFCI Outlet Installation</h4>
+                            <p>Safety GFCI outlets for bathroom and kitchen</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <svg width="300" height="200" viewBox="0 0 300 200">
+                            <rect width="300" height="200" fill="#f0f8ff" rx="10"/>
+                            <rect x="40" y="60" width="220" height="80" fill="#dc2626" opacity="0.3" rx="5"/>
+                            <circle cx="100" cy="100" r="15" fill="#0ea5e9"/>
+                            <circle cx="150" cy="100" r="15" fill="#0ea5e9"/>
+                            <circle cx="200" cy="100" r="15" fill="#0ea5e9"/>
+                            <text x="150" y="180" text-anchor="middle" fill="#333" font-size="12">Emergency Repair</text>
+                        </svg>
+                        <div class="gallery-overlay">
+                            <h4>Emergency Electrical Repair</h4>
+                            <p>24/7 emergency electrical troubleshooting and repair</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info animate-on-scroll">
+                        <div class="contact-item">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="#dc2626">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="#0ea5e9">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@electricpro.com">info@electricpro.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form animate-on-scroll" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" class="logo-svg">
+                            <circle cx="20" cy="20" r="18" fill="#dc2626"/>
+                            <path d="M15 15 L25 15 M15 20 L25 20 M15 25 L25 25" stroke="#fff" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+                        </svg>
+                        <span class="logo-text">ElectricPro</span>
+                    </div>
+                    <p>Professional electrical services with over 15 years of experience. Licensed, insured, and committed to quality.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#gallery">Work Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </p>
+                        <p>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <a href="mailto:info@electricpro.com">info@electricpro.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency Service</h4>
+                    <p class="emergency-text">24/7 Available</p>
+                    <a href="tel:+1234567890" class="emergency-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Emergency Call
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ElectricPro. All rights reserved.</p>
+                <p>Licensed & Insured Electrical Contractor</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
