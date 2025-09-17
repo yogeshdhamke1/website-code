@@ -1,0 +1,40 @@
+{
+    "name": "Pure Glow Organics - Premium Organic Skincare",
+    "short_name": "Pure Glow",
+    "description": "Premium organic skincare products for natural beauty and healthy skin",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2d5a27",
+    "orientation": "portrait-primary",
+    "categories": ["shopping", "beauty", "health"],
+    "lang": "en-US",
+    "icons": [
+        {
+            "src": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=192&h=192",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=512&h=512",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1280&h=720",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=750&h=1334",
+            "sizes": "750x1334",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ]
+}

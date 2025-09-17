@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium organic skincare products for natural beauty. Shop our collection of certified organic face serums, moisturizers, and cleansers.">
+    <meta name="keywords" content="organic skincare, natural beauty, face serum, moisturizer, organic cosmetics">
+    <meta name="author" content="Pure Glow Organics">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Pure Glow Organics - Premium Organic Skincare">
+    <meta property="og:description" content="Discover our collection of certified organic skincare products for radiant, healthy skin.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://puregloworganics.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1200&h=630">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pure Glow Organics",
+        "url": "https://puregloworganics.com",
+        "logo": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=200&h=200",
+        "description": "Premium organic skincare products for natural beauty"
+    }
+    </script>
+    
+    <title>Pure Glow Organics - Premium Organic Skincare Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Pure Glow</h1>
+                    <span>Organics</span>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search products">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="account-btn" aria-label="User account">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="cart-btn" aria-label="Shopping cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" role="main">
+        <div class="hero-content">
+            <h2>Natural Beauty, Naturally Yours</h2>
+            <p>Discover our premium collection of certified organic skincare products crafted with the finest natural ingredients for radiant, healthy skin.</p>
+            <button class="cta-btn" onclick="scrollToProducts()">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="images/Hero Image.jpg" alt="Organic skincare products with natural ingredients" loading="eager">
+        </div>
+    </section>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-content">
+            <input type="search" placeholder="Search products..." class="search-input" id="searchInput" aria-label="Search products">
+            <button class="search-close" id="searchClose" aria-label="Close search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- Product Categories -->
+    <section class="categories" aria-labelledby="categories-title">
+        <div class="container">
+            <h2 id="categories-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="serums">
+                    <img src="images/Face Serums.jpg" alt="Face serums collection" loading="lazy">
+                    <h3>Face Serums</h3>
+                    <p>Concentrated treatments for targeted skincare</p>
+                </div>
+                <div class="category-card" data-category="moisturizers">
+                    <img src="images/Moisturizers.jpg" alt="Moisturizers collection" loading="lazy">
+                    <h3>Moisturizers</h3>
+                    <p>Hydrating creams for all skin types</p>
+                </div>
+                <div class="category-card" data-category="cleansers">
+                    <img src="images/Cleansers.jpg" alt="Cleansers collection" loading="lazy">
+                    <h3>Cleansers</h3>
+                    <p>Gentle cleansing for pure, fresh skin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products" aria-labelledby="products-title">
+        <div class="container">
+            <h2 id="products-title">Featured Products</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="serums">Serums</button>
+                <button class="filter-btn" data-filter="moisturizers">Moisturizers</button>
+                <button class="filter-btn" data-filter="cleansers">Cleansers</button>
+            </div>
+            
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close product details">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about" aria-labelledby="about-title">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 id="about-title">Why Choose Pure Glow Organics?</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>100% Organic</h3>
+                            <p>Certified organic ingredients sourced from sustainable farms</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-flask"></i>
+                            <h3>Scientifically Proven</h3>
+                            <p>Formulated with clinically tested natural compounds</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h3>Cruelty-Free</h3>
+                            <p>Never tested on animals, always ethically produced</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/Organics.jpg" alt="Natural skincare ingredients" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog" aria-labelledby="blog-title">
+        <div class="container">
+            <h2 id="blog-title">Skincare Tips & Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="images/The Perfect Morning Skincare Routine.jpg" alt="Morning skincare routine" loading="lazy">
+                    <div class="blog-content">
+                        <h3>The Perfect Morning Skincare Routine</h3>
+                        <p>Start your day with these essential steps for glowing, healthy skin...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="images/Benefits of Natural Skincare Ingredients.jpg" alt="Natural ingredients benefits" loading="lazy">
+                    <div class="blog-content">
+                        <h3>Benefits of Natural Skincare Ingredients</h3>
+                        <p>Discover why organic ingredients are better for your skin...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="images/Seasonal Skincare Adapting Your Routine.jpg" alt="Seasonal skincare tips" loading="lazy">
+                    <div class="blog-content">
+                        <h3>Seasonal Skincare: Adapting Your Routine</h3>
+                        <p>How to adjust your skincare routine for different seasons...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@puregloworganics.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Organic Street, Natural City, NC 12345</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-toggle" id="chatToggle" aria-label="Toggle live chat">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h4>Live Support</h4>
+                <button class="chat-minimize" id="chatMinimize" aria-label="Minimize chat">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <p>Hello! How can I help you today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." id="chatInput" aria-label="Chat message">
+                <button id="chatSend" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pure Glow Organics</h3>
+                    <p>Premium organic skincare for natural beauty and healthy skin.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for skincare tips and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+                        <button type="submit" aria-label="Subscribe to newsletter">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pure Glow Organics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
