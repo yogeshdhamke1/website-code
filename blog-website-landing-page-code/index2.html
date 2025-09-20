@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Voices - Stories and Insights from Around the World</title>
+    <meta name="description" content="A space for global conversations, innovation, and ideas from diverse cultures worldwide">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Global Voices</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="en">🇺🇸 EN</option>
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="es">🇪🇸 ES</option>
+                        <option value="ar">🇸🇦 AR</option>
+                        <option value="zh">🇨🇳 ZH</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title" data-translate="hero.title">Stories and Insights from Around the World</h1>
+            <p class="hero-subtitle" data-translate="hero.subtitle">A space for global conversations, innovation, and ideas that connect cultures and inspire change</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" data-translate="hero.readLatest">Read Latest Posts</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('languageSelect').focus()" data-translate="hero.selectLanguage">Select Language</button>
+            </div>
+        </div>
+        <!-- Blog Post Slider (was hero-visual in index.html) -->
+        <div class="hero-slider">
+            <div class="slider-wrapper">
+                <!-- Slides will be dynamically inserted here by JavaScript -->
+            </div>
+            <div class="slider-nav">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots">
+                <!-- Dots will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts -->
+    <section class="blog-posts" id="blog">
+        <div class="container">
+            <h2 class="section-title" data-translate="posts.title">Latest Stories</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <img src="images/blog-1.jpg" alt="Cultural diversity" loading="lazy">
+                    <div class="post-content">
+                        <h3>Bridging Cultures Through Technology</h3>
+                        <div class="post-meta">
+                            <span class="author">Maria Rodriguez</span>
+                            <span class="date">Dec 15, 2024</span>
+                        </div>
+                        <p class="excerpt">How digital platforms are creating new opportunities for cross-cultural collaboration...</p>
+                        <a href="#" class="read-more" data-translate="posts.readMore">Read More</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/blog-2.jpg" alt="Global innovation" loading="lazy">
+                    <div class="post-content">
+                        <h3>Sustainable Innovation Across Continents</h3>
+                        <div class="post-meta">
+                            <span class="author">Ahmed Hassan</span>
+                            <span class="date">Dec 12, 2024</span>
+                        </div>
+                        <p class="excerpt">Exploring groundbreaking environmental solutions from different corners of the world...</p>
+                        <a href="#" class="read-more" data-translate="posts.readMore">Read More</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/blog-3.jpg" alt="Global business" loading="lazy">
+                    <div class="post-content">
+                        <h3>The Future of Global Commerce</h3>
+                        <div class="post-meta">
+                            <span class="author">Li Wei</span>
+                            <span class="date">Dec 10, 2024</span>
+                        </div>
+                        <p class="excerpt">Understanding emerging markets and their impact on international trade patterns...</p>
+                        <a href="#" class="read-more" data-translate="posts.readMore">Read More</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/blog-4.jpg" alt="Technology trends" loading="lazy">
+                    <div class="post-content">
+                        <h3>AI Ethics: A Global Perspective</h3>
+                        <div class="post-meta">
+                            <span class="author">Priya Sharma</span>
+                            <span class="date">Dec 8, 2024</span>
+                        </div>
+                        <p class="excerpt">How different cultures approach artificial intelligence and its ethical implications...</p>
+                        <a href="#" class="read-more" data-translate="posts.readMore">Read More</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/blog-5.jpg" alt="Travel culture" loading="lazy">
+                    <div class="post-content">
+                        <h3>Sustainable Travel in a Connected World</h3>
+                        <div class="post-meta">
+                            <span class="author">Emma Johnson</span>
+                            <span class="date">Dec 5, 2024</span>
+                        </div>
+                        <p class="excerpt">Discovering how responsible tourism is reshaping global travel experiences...</p>
+                        <a href="#" class="read-more" data-translate="posts.readMore">Read More</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/blog-6.jpg" alt="Social impact" loading="lazy">
+                    <div class="post-content">
+                        <h3>Social Movements Across Borders</h3>
+                        <div class="post-meta">
+                            <span class="author">Carlos Silva</span>
+                            <span class="date">Dec 3, 2024</span>
+                        </div>
+                        <p class="excerpt">How grassroots movements are creating global change through local action...</p>
+                        <a href="#" class="read-more" data-translate="posts.readMore">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title" data-translate="categories.title">Explore Topics</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3 data-translate="categories.culture">Culture & Society</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 data-translate="categories.business">Business & Economy</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3 data-translate="categories.innovation">Innovation & Tech</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-trending-up"></i>
+                    <h3 data-translate="categories.trends">Global Trends</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3 data-translate="categories.sustainability">Sustainability</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-plane"></i>
+                    <h3 data-translate="categories.travel">Travel & Lifestyle</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-palette"></i>
+                    <h3 data-translate="categories.arts">Arts & Design</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3 data-translate="categories.health">Health & Wellness</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts Grid -->
+    <section class="featured-posts">
+        <div class="container">
+            <h2 class="section-title" data-translate="featured.title">Featured Posts</h2>
+            <div class="featured-grid">
+                <a href="#" class="featured-item">
+                    <img src="images/post-1.jpg" alt="Featured Post 1" loading="lazy">
+                    <div class="featured-overlay">
+                        <h3>The Intersection of Art and AI</h3>
+                    </div>
+                </a>
+                <a href="#" class="featured-item">
+                    <img src="images/post-2.jpg" alt="Featured Post 2" loading="lazy">
+                    <div class="featured-overlay">
+                        <h3>Remote Work and Global Collaboration</h3>
+                    </div>
+                </a>
+                <a href="#" class="featured-item">
+                    <img src="images/post-3.jpg" alt="Featured Post 3" loading="lazy">
+                    <div class="featured-overlay">
+                        <h3>Urban Farming Innovations</h3>
+                    </div>
+                </a>
+                <a href="#" class="featured-item">
+                    <img src="images/post-4.jpg" alt="Featured Post 4" loading="lazy">
+                    <div class="featured-overlay">
+                        <h3>Mindfulness in a Digital World</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title" data-translate="about.title">About Global Voices</h2>
+                    <p data-translate="about.description">We are a diverse community of writers, thinkers, and storytellers from around the world, united by our passion for sharing authentic perspectives and fostering cross-cultural understanding.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>150+</h3>
+                            <p data-translate="about.contributors">Contributors</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p data-translate="about.countries">Countries</p>
+                        </div>
+                        <div class="stat">
+                            <h3>25+</h3>
+                            <p data-translate="about.languages">Languages</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1M+</h3>
+                            <p data-translate="about.readers">Monthly Readers</p>
+                        </div>
+                    </div>
+                    <!-- <div class="about-mission">
+                        <h3 data-translate="about.missionTitle">Our Mission</h3>
+                        <p data-translate="about.mission">To bridge cultural divides through authentic storytelling, promote global understanding, and amplify diverse voices that shape our interconnected world.</p>
+                    </div> -->
+                </div>
+                <div class="about-visual">
+                    <div class="about-image">
+                        <img src="images/about.jpg" alt="Global community" loading="lazy">
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-globe"></i>
+                            <span data-translate="about.global">Global Reach</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span data-translate="about.community">Diverse Community</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span data-translate="about.authentic">Authentic Stories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="authors" id="authors">
+        <div class="container">
+            <h2 class="section-title" data-translate="authors.title">Global Contributors</h2>
+            <div class="authors-grid">
+                <div class="author-card">
+                    <img src="images/author-1.jpg" alt="Maria Rodriguez">
+                    <h3>Maria Rodriguez</h3>
+                    <p class="author-country">🇪🇸 Spain</p>
+                    <p class="author-articles">24 articles</p>
+                </div>
+                <div class="author-card">
+                    <img src="images/author-2.jpg" alt="Ahmed Hassan">
+                    <h3>Ahmed Hassan</h3>
+                    <p class="author-country">🇪🇬 Egypt</p>
+                    <p class="author-articles">18 articles</p>
+                </div>
+                <div class="author-card">
+                    <img src="images/author-3.jpg" alt="Li Wei">
+                    <h3>Li Wei</h3>
+                    <p class="author-country">🇨🇳 China</p>
+                    <p class="author-articles">31 articles</p>
+                </div>
+                <div class="author-card">
+                    <img src="images/author-4.jpg" alt="Priya Sharma">
+                    <h3>Priya Sharma</h3>
+                    <p class="author-country">🇮🇳 India</p>
+                    <p class="author-articles">22 articles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Slider -->
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title" data-translate="partners.title">Our Partners</h2>
+            <div class="partner-slider">
+                <div class="partner-track">
+                    <!-- Logos will be duplicated by CSS for infinite effect -->
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/ibm.com" alt="IBM"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/oracle.com" alt="Oracle"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/spotify.com" alt="Spotify"></div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/ibm.com" alt="IBM"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/oracle.com" alt="Oracle"></div>
+                    <div class="partner-logo"><img src="https://logo.clearbit.com/spotify.com" alt="Spotify"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter" id="contact">
+        <div class="container">
+            <h2 data-translate="newsletter.title">Stay Connected with Global Voices</h2>
+            <p data-translate="newsletter.subtitle">Get the latest stories and insights delivered to your inbox</p>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Your Name" data-translate-placeholder="newsletter.namePlaceholder" required>
+                <input type="email" placeholder="Your Email" data-translate-placeholder="newsletter.emailPlaceholder" required>
+                <button type="submit" class="btn btn-primary" data-translate="newsletter.subscribe">Subscribe</button>
+            </form>
+            <p class="privacy-notice" data-translate="newsletter.privacy">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Global Voices</h3>
+                    <p data-translate="footer.description">Connecting cultures through stories</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.navigation">Navigation</h4>
+                    <ul>
+                        <li><a href="#home" data-translate="footer.home">Home</a></li>
+                        <li><a href="#blog" data-translate="footer.blog">Blog</a></li>
+                        <li><a href="#about" data-translate="footer.about">About</a></li>
+                        <li><a href="#contact" data-translate="footer.contact">Contact</a></li>
+                        <li><a href="#privacy" data-translate="footer.privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.followUs">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.language">Language</h4>
+                    <select class="footer-language-select">
+                        <option value="en">🇺🇸 English</option>
+                        <option value="fr">🇫🇷 Français</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                        <option value="zh">🇨🇳 中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Global Voices. <span data-translate="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
