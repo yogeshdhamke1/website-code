@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with StudioWave. Let's discuss your next project.">
+    <title>Contact - StudioWave</title>
+    <link rel="canonical" href="https://studiowave.com/contact">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body bg-offwhite text-dark">
+    <header id="header" class="fixed w-full top-0 z-50 bg-dark shadow-lg transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-heading font-bold text-white">STUDIOWAVE</a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <ul id="nav-menu" class="hidden md:flex space-x-8 text-white font-medium items-center">
+                <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                <li><a href="case-studies.html" class="hover:text-accent transition">Case Studies</a></li>
+                <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+                <li class="relative dropdown-menu">
+                    <button class="hover:text-accent transition flex items-center gap-1">More <i class="fas fa-chevron-down text-xs"></i></button>
+                    <ul class="dropdown-content absolute hidden bg-dark mt-2 py-2 w-48 rounded shadow-lg">
+                        <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">About</a></li>
+                        <li><a href="team.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Team</a></li>
+                        <li><a href="portfolio.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Portfolio</a></li>
+                        <li><a href="process.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Process</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Careers</a></li>
+                        <li><a href="quote.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Get a Quote</a></li>
+                        <li><a href="press.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Press</a></li>
+                        <li><a href="faq.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">FAQ</a></li>
+                        <li><a href="privacy.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Privacy Policy</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="bg-accent px-6 py-2 rounded hover:bg-red-700 transition">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark px-6 pb-4">
+            <ul class="space-y-4 text-white">
+                <li><a href="index.html" class="block hover:text-accent transition">Home</a></li>
+                <li><a href="services.html" class="block hover:text-accent transition">Services</a></li>
+                <li><a href="case-studies.html" class="block hover:text-accent transition">Case Studies</a></li>
+                <li><a href="blog.html" class="block hover:text-accent transition">Blog</a></li>
+                <li><a href="contact.html" class="block hover:text-accent transition">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="py-20 bg-dark text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="font-heading text-5xl md:text-6xl font-bold uppercase mb-6" data-aos="fade-up">GET IN TOUCH</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Let's create something amazing together. Reach out to discuss your project.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-offwhite">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div data-aos="fade-up">
+                        <h2 class="font-heading text-3xl font-bold uppercase mb-6">SEND US A MESSAGE</h2>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold mb-2">Name *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-accent focus:outline-none" aria-required="true">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-accent focus:outline-none" aria-required="true">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-accent focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-semibold mb-2">Service Interested In</label>
+                                <select id="service" name="service" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-accent focus:outline-none">
+                                    <option value="">Select a service</option>
+                                    <option value="branding">Branding & Identity</option>
+                                    <option value="marketing">Digital Marketing</option>
+                                    <option value="strategy">Creative Strategy</option>
+                                    <option value="web">Web Design & Development</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-semibold mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-accent focus:outline-none" aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="bg-accent text-white px-8 py-4 rounded font-semibold hover:bg-red-700 transition w-full md:w-auto">Send Message</button>
+                        </form>
+                        <div id="success-message" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded">
+                            Thank you for your message! We'll get back to you soon.
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="font-heading text-3xl font-bold uppercase mb-6">CONTACT INFORMATION</h2>
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Office Address</h3>
+                                <p class="text-gray-700">123 Creative Street<br>New York, NY 10001<br>United States</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Email</h3>
+                                <p class="text-gray-700"><a href="mailto:hello@studiowave.com" class="text-accent hover:underline">hello@studiowave.com</a></p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Phone</h3>
+                                <p class="text-gray-700"><a href="tel:+15551234567" class="text-accent hover:underline">(555) 123-4567</a></p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Business Hours</h3>
+                                <p class="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday - Sunday: Closed</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="font-semibold text-lg mb-4">Follow Us</h3>
+                            <div class="flex gap-4">
+                                <a href="#" class="bg-dark text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-accent transition" aria-label="Facebook">FB</a>
+                                <a href="#" class="bg-dark text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-accent transition" aria-label="Twitter">TW</a>
+                                <a href="#" class="bg-dark text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-accent transition" aria-label="Instagram">IG</a>
+                                <a href="#" class="bg-dark text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-accent transition" aria-label="LinkedIn">LI</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-200 rounded-lg overflow-hidden h-64">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location map"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-heading text-xl font-bold uppercase mb-4">STUDIOWAVE</h3>
+                    <p class="text-gray-400">Modern marketing and branding agency.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">QUICK LINKS</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                        <li><a href="case-studies.html" class="hover:text-accent transition">Case Studies</a></li>
+                        <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">CONTACT</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>123 Creative Street</li>
+                        <li>New York, NY 10001</li>
+                        <li>hello@studiowave.com</li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">FOLLOW US</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Facebook">FB</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Twitter">TW</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Instagram">IG</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 StudioWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

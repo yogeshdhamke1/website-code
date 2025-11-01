@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudioWave - A forward-thinking marketing and branding agency with strong visual storytelling and modern web interactions.">
+    <meta name="keywords" content="marketing agency, branding, creative strategy, digital marketing">
+    <meta name="author" content="StudioWave">
+    <meta property="og:title" content="StudioWave - Modern Marketing & Branding Agency">
+    <meta property="og:description" content="Forward-thinking marketing and branding agency with strong visual storytelling.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://studiowave.com">
+    <meta property="og:image" content="https://studiowave.com/images/og-image.jpg">
+    <title>StudioWave - Modern Marketing & Branding Agency</title>
+    <link rel="canonical" href="https://studiowave.com">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "StudioWave",
+      "url": "https://studiowave.com",
+      "logo": "https://studiowave.com/images/logo.png",
+      "description": "Modern marketing and branding agency",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body class="font-body bg-offwhite text-dark">
+    <header id="header" class="fixed w-full top-0 z-50 bg-dark shadow-lg transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-heading font-bold text-white">STUDIOWAVE</a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <ul id="nav-menu" class="hidden md:flex space-x-8 text-white font-medium items-center">
+                <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                <li><a href="case-studies.html" class="hover:text-accent transition">Case Studies</a></li>
+                <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+                <li class="relative dropdown-menu">
+                    <button class="hover:text-accent transition flex items-center gap-1">More <i class="fas fa-chevron-down text-xs"></i></button>
+                    <ul class="dropdown-content absolute hidden bg-dark mt-2 py-2 w-48 rounded shadow-lg">
+                        <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">About</a></li>
+                        <li><a href="team.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Team</a></li>
+                        <li><a href="portfolio.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Portfolio</a></li>
+                        <li><a href="process.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Process</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Careers</a></li>
+                        <li><a href="quote.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Get a Quote</a></li>
+                        <li><a href="press.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Press</a></li>
+                        <li><a href="faq.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">FAQ</a></li>
+                        <li><a href="privacy.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Privacy Policy</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="bg-accent px-6 py-2 rounded hover:bg-red-700 transition">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark px-6 pb-4">
+            <ul class="space-y-4 text-white">
+                <li><a href="index.html" class="block hover:text-accent transition">Home</a></li>
+                <li><a href="services.html" class="block hover:text-accent transition">Services</a></li>
+                <li><a href="case-studies.html" class="block hover:text-accent transition">Case Studies</a></li>
+                <li><a href="blog.html" class="block hover:text-accent transition">Blog</a></li>
+                <li><a href="about.html" class="block hover:text-accent transition">About</a></li>
+                <li><a href="team.html" class="block hover:text-accent transition">Team</a></li>
+                <li><a href="portfolio.html" class="block hover:text-accent transition">Portfolio</a></li>
+                <li><a href="process.html" class="block hover:text-accent transition">Process</a></li>
+                <li><a href="careers.html" class="block hover:text-accent transition">Careers</a></li>
+                <li><a href="quote.html" class="block hover:text-accent transition">Get a Quote</a></li>
+                <li><a href="faq.html" class="block hover:text-accent transition">FAQ</a></li>
+                <li><a href="contact.html" class="block hover:text-accent transition">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero min-h-screen flex items-center justify-center text-white pt-20 relative overflow-hidden" data-aos="fade-up">
+            <div class="hero-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920');"></div>
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="font-heading text-5xl md:text-7xl font-bold uppercase mb-6 text-red-600">CREATIVE SOLUTIONS<br>FOR MODERN BRANDS</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-red-400">We craft compelling brand stories and digital experiences that resonate with your audience.</p>
+                <a href="contact.html" class="inline-block bg-accent px-8 py-4 rounded text-lg font-semibold hover:bg-red-700 transition">Get Started</a>
+            </div>
+        </section>
+
+        <section class="py-20 bg-offwhite" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase mb-6">WHO WE ARE</h2>
+                    <p class="text-lg text-gray-700">StudioWave is a forward-thinking marketing and branding agency dedicated to helping businesses stand out in the digital landscape. We combine strategic thinking with creative execution to deliver results that matter.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase text-center mb-16">OUR SERVICES</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="service-card p-8 bg-offwhite rounded-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-accent text-5xl mb-4"><i class="fas fa-palette"></i></div>
+                        <h3 class="font-heading text-2xl font-bold uppercase mb-4">BRANDING</h3>
+                        <p class="text-gray-700 mb-6">Build a memorable brand identity that connects with your audience and stands the test of time.</p>
+                        <a href="services.html" class="text-accent font-semibold hover:underline">Learn More →</a>
+                    </div>
+                    <div class="service-card p-8 bg-offwhite rounded-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-accent text-5xl mb-4"><i class="fas fa-bullhorn"></i></div>
+                        <h3 class="font-heading text-2xl font-bold uppercase mb-4">DIGITAL MARKETING</h3>
+                        <p class="text-gray-700 mb-6">Drive growth with data-driven marketing strategies across all digital channels.</p>
+                        <a href="services.html" class="text-accent font-semibold hover:underline">Learn More →</a>
+                    </div>
+                    <div class="service-card p-8 bg-offwhite rounded-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-accent text-5xl mb-4"><i class="fas fa-lightbulb"></i></div>
+                        <h3 class="font-heading text-2xl font-bold uppercase mb-4">CREATIVE STRATEGY</h3>
+                        <p class="text-gray-700 mb-6">Develop innovative campaigns that capture attention and inspire action.</p>
+                        <a href="services.html" class="text-accent font-semibold hover:underline">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-dark text-white" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase text-center mb-16">FEATURED WORK</h2>
+                <div class="case-slider relative max-w-5xl mx-auto">
+                    <div class="slider-container overflow-hidden">
+                        <div class="slider-track flex transition-transform duration-500">
+                            <div class="slide min-w-full">
+                                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Project 1" class="w-full h-96 object-cover">
+                                    <div class="p-8">
+                                        <h3 class="font-heading text-2xl font-bold uppercase mb-2">TECH STARTUP REBRAND</h3>
+                                        <p class="text-gray-300 mb-4">Complete brand overhaul for a Silicon Valley tech company</p>
+                                        <a href="case-studies.html" class="text-accent font-semibold hover:underline">View Case Study →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide min-w-full">
+                                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800" alt="Project 2" class="w-full h-96 object-cover">
+                                    <div class="p-8">
+                                        <h3 class="font-heading text-2xl font-bold uppercase mb-2">E-COMMERCE CAMPAIGN</h3>
+                                        <p class="text-gray-300 mb-4">Digital marketing strategy that increased sales by 300%</p>
+                                        <a href="case-studies.html" class="text-accent font-semibold hover:underline">View Case Study →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide min-w-full">
+                                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" alt="Project 3" class="w-full h-96 object-cover">
+                                    <div class="p-8">
+                                        <h3 class="font-heading text-2xl font-bold uppercase mb-2">SOCIAL MEDIA STRATEGY</h3>
+                                        <p class="text-gray-300 mb-4">Built engaged community of 100K+ followers in 6 months</p>
+                                        <a href="case-studies.html" class="text-accent font-semibold hover:underline">View Case Study →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn prev absolute left-0 top-1/2 -translate-y-1/2 bg-accent p-3 rounded-full hover:bg-red-700 transition" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left text-white"></i>
+                    </button>
+                    <button class="slider-btn next absolute right-0 top-1/2 -translate-y-1/2 bg-accent p-3 rounded-full hover:bg-red-700 transition" aria-label="Next slide">
+                        <i class="fas fa-chevron-right text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-accent text-white" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="counter text-5xl font-heading font-bold mb-2" data-target="250">0</div>
+                        <p class="text-lg">Projects Completed</p>
+                    </div>
+                    <div>
+                        <div class="counter text-5xl font-heading font-bold mb-2" data-target="150">0</div>
+                        <p class="text-lg">Happy Clients</p>
+                    </div>
+                    <div>
+                        <div class="counter text-5xl font-heading font-bold mb-2" data-target="50">0</div>
+                        <p class="text-lg">Team Members</p>
+                    </div>
+                    <div>
+                        <div class="counter text-5xl font-heading font-bold mb-2" data-target="15">0</div>
+                        <p class="text-lg">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-offwhite" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase text-center mb-16">CLIENT TESTIMONIALS</h2>
+                <div class="testimonial-slider max-w-4xl mx-auto">
+                    <div class="testimonial bg-white p-8 rounded-lg shadow-lg text-center">
+                        <p class="text-xl text-gray-700 mb-6 italic">"StudioWave transformed our brand and helped us connect with our audience in ways we never imagined. Their creative approach is unmatched."</p>
+                        <div class="font-semibold">Sarah Johnson</div>
+                        <div class="text-gray-600">CEO, TechVision</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800" alt="Our Story" class="rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase mb-6">OUR STORY</h2>
+                        <p class="text-lg text-gray-700 mb-4">Founded in 2009, StudioWave began with a simple mission: to help brands tell their stories in meaningful ways. What started as a small creative studio has grown into a full-service marketing and branding agency.</p>
+                        <p class="text-lg text-gray-700 mb-4">We believe in the power of authentic storytelling and strategic thinking. Our approach combines data-driven insights with creative excellence to deliver results that matter.</p>
+                        <p class="text-lg text-gray-700 mb-6">Today, we're proud to work with innovative brands across industries, helping them connect with their audiences and achieve their business goals.</p>
+                        <a href="about.html" class="inline-block bg-accent text-white px-8 py-3 rounded font-semibold hover:bg-red-700 transition">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-20 bg-offwhite" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase text-center mb-16">MEET OUR TEAM</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Team member" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-heading text-xl font-bold uppercase mb-2">JOHN SMITH</h3>
+                        <p class="text-accent font-semibold mb-2">Founder & CEO</p>
+                        <p class="text-gray-600 text-sm">Visionary leader with 15+ years in branding</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Team member" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-heading text-xl font-bold uppercase mb-2">SARAH CHEN</h3>
+                        <p class="text-accent font-semibold mb-2">Creative Director</p>
+                        <p class="text-gray-600 text-sm">Award-winning designer and strategist</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Team member" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-heading text-xl font-bold uppercase mb-2">MIKE JOHNSON</h3>
+                        <p class="text-accent font-semibold mb-2">Marketing Director</p>
+                        <p class="text-gray-600 text-sm">Digital marketing expert and analyst</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Team member" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-heading text-xl font-bold uppercase mb-2">EMILY DAVIS</h3>
+                        <p class="text-accent font-semibold mb-2">Strategy Lead</p>
+                        <p class="text-gray-600 text-sm">Brand strategist with global experience</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="team.html" class="inline-block bg-dark text-white px-8 py-3 rounded font-semibold hover:bg-gray-800 transition">View Full Team</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="quote" class="py-20 bg-dark text-white" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase text-center mb-6">GET A QUOTE</h2>
+                    <p class="text-xl text-center mb-12">Tell us about your project and we'll provide a custom quote within 24 hours.</p>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Your Name *" required class="w-full px-4 py-3 rounded text-dark" aria-label="Name">
+                            <input type="email" placeholder="Your Email *" required class="w-full px-4 py-3 rounded text-dark" aria-label="Email">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded text-dark" aria-label="Phone">
+                            <select class="w-full px-4 py-3 rounded text-dark" aria-label="Budget">
+                                <option value="">Budget Range</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="50k+">$50,000+</option>
+                            </select>
+                        </div>
+                        <textarea placeholder="Project Details *" rows="5" required class="w-full px-4 py-3 rounded text-dark" aria-label="Project details"></textarea>
+                        <button type="submit" class="w-full bg-accent px-8 py-4 rounded text-lg font-semibold hover:bg-red-700 transition">Request Quote</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-dark text-white text-center" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase mb-6">READY TO START YOUR PROJECT?</h2>
+                <p class="text-xl mb-8">Let's create something amazing together.</p>
+                <a href="contact.html" class="inline-block bg-accent px-8 py-4 rounded text-lg font-semibold hover:bg-red-700 transition">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-heading text-xl font-bold uppercase mb-4">STUDIOWAVE</h3>
+                    <p class="text-gray-400">Modern marketing and branding agency.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">QUICK LINKS</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                        <li><a href="case-studies.html" class="hover:text-accent transition">Case Studies</a></li>
+                        <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">CONTACT</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>123 Creative Street</li>
+                        <li>New York, NY 10001</li>
+                        <li>hello@studiowave.com</li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">FOLLOW US</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Facebook">FB</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Twitter">TW</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Instagram">IG</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 StudioWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
