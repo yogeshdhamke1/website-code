@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Lightbox</title>
+    <style>
+        .portfolio__item {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid #ccc;
+        }
+        .portfolio__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+        .lightbox__img {
+            max-width: 90%;
+            max-height: 85vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .lightbox__close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #fff;
+            font-size: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click on image to test lightbox</h1>
+    
+    <div class="portfolio__item">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=600&fit=crop" alt="Test" class="portfolio__img">
+    </div>
+    
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox__close" id="lightbox-close">&times;</span>
+        <img src="" alt="Portfolio Image" class="lightbox__img" id="lightbox-img">
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const item = document.querySelector('.portfolio__item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.getElementById('lightbox-close');
+            
+            console.log('Item:', item);
+            console.log('Lightbox:', lightbox);
+            
+            item.addEventListener('click', function() {
+                console.log('Clicked!');
+                const img = item.querySelector('.portfolio__img');
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'block';
+            });
+            
+            lightboxClose.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
