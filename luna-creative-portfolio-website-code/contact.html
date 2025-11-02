@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Luna Creative Photographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header scroll-header" id="header">
+        <nav class="nav">
+            <div class="nav__logo">
+                <h3><a href="index.html" style="color: inherit; text-decoration: none;">Luna</a></h3>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="portfolio.html" class="nav__link">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="services.html" class="nav__link">Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="contact.html" class="nav__link active-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact section" id="contact" style="padding-top: 8rem;">
+        <div class="container">
+            <h2 class="section__title">Get In Touch</h2>
+            <p class="contact__subtitle">Let's create something beautiful together.</p>
+            <div class="contact__container">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="fas fa-envelope contact__card-icon"></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">hello@luna.com</span>
+                            <a href="mailto:hello@luna.com" class="contact__button">Send Email</a>
+                        </div>
+                        <div class="contact__card">
+                            <i class="fab fa-instagram contact__card-icon"></i>
+                            <h3 class="contact__card-title">Instagram</h3>
+                            <span class="contact__card-data">@luna_photo</span>
+                            <a href="https://instagram.com/luna_photo" class="contact__button" target="_blank">Follow</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form" id="contact-form">
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">Name</label>
+                        <input type="text" name="name" placeholder="Your name" class="contact__form-input" required>
+                    </div>
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">Email</label>
+                        <input type="email" name="email" placeholder="Your email" class="contact__form-input" required>
+                    </div>
+                    <div class="contact__form-div contact__form-area">
+                        <label class="contact__form-tag">Message</label>
+                        <textarea name="message" cols="30" rows="10" placeholder="Your message" class="contact__form-input" required></textarea>
+                    </div>
+                    <button type="submit" class="button button--primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <h1 class="footer__title">Luna</h1>
+                <ul class="footer__social">
+                    <a href="https://instagram.com/luna_photo" class="footer__social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://behance.net/luna" class="footer__social-link" target="_blank">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                    <a href="https://pinterest.com/luna" class="footer__social-link" target="_blank">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </ul>
+                <span class="footer__copy">© 2024 Luna. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-chevron-up scrollup__icon"></i>
+    </a>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

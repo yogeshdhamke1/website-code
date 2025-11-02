@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the latest insights on marketing, branding, and creative strategy from StudioWave.">
+    <title>Blog - StudioWave</title>
+    <link rel="canonical" href="https://studiowave.com/blog">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body bg-offwhite text-dark">
+    <header id="header" class="fixed w-full top-0 z-50 bg-dark shadow-lg transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-heading font-bold text-white">STUDIOWAVE</a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <ul id="nav-menu" class="hidden md:flex space-x-8 text-white font-medium items-center">
+                <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                <li><a href="case-studies.html" class="hover:text-accent transition">Case Studies</a></li>
+                <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+                <li class="relative dropdown-menu">
+                    <button class="hover:text-accent transition flex items-center gap-1">More <i class="fas fa-chevron-down text-xs"></i></button>
+                    <ul class="dropdown-content absolute hidden bg-dark mt-2 py-2 w-48 rounded shadow-lg">
+                        <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">About</a></li>
+                        <li><a href="team.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Team</a></li>
+                        <li><a href="portfolio.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Portfolio</a></li>
+                        <li><a href="process.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Process</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Careers</a></li>
+                        <li><a href="quote.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Get a Quote</a></li>
+                        <li><a href="press.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Press</a></li>
+                        <li><a href="faq.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">FAQ</a></li>
+                        <li><a href="privacy.html" class="block px-4 py-2 hover:bg-gray-800 hover:text-accent transition">Privacy Policy</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="bg-accent px-6 py-2 rounded hover:bg-red-700 transition">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark px-6 pb-4">
+            <ul class="space-y-4 text-white">
+                <li><a href="index.html" class="block hover:text-accent transition">Home</a></li>
+                <li><a href="services.html" class="block hover:text-accent transition">Services</a></li>
+                <li><a href="case-studies.html" class="block hover:text-accent transition">Case Studies</a></li>
+                <li><a href="blog.html" class="block hover:text-accent transition">Blog</a></li>
+                <li><a href="contact.html" class="block hover:text-accent transition">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="py-20 bg-dark text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="font-heading text-5xl md:text-6xl font-bold uppercase mb-6" data-aos="fade-up">BLOG</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Insights, trends, and tips from the world of marketing and branding.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-offwhite">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap gap-4 mb-12 justify-center">
+                    <button class="bg-accent text-white px-6 py-2 rounded font-semibold hover:bg-red-700 transition">All</button>
+                    <button class="bg-white text-dark px-6 py-2 rounded font-semibold hover:bg-gray-100 transition">Branding</button>
+                    <button class="bg-white text-dark px-6 py-2 rounded font-semibold hover:bg-gray-100 transition">Marketing</button>
+                    <button class="bg-white text-dark px-6 py-2 rounded font-semibold hover:bg-gray-100 transition">Strategy</button>
+                    <button class="bg-white text-dark px-6 py-2 rounded font-semibold hover:bg-gray-100 transition">Design</button>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="blog-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1698434156098-68e834638679?w=600" alt="Blog post" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-accent text-white text-xs px-3 py-1 rounded">Branding</span>
+                                <span class="text-gray-500 text-sm">May 15, 2024</span>
+                            </div>
+                            <h2 class="font-heading text-2xl font-bold uppercase mb-3">THE FUTURE OF BRAND IDENTITY</h2>
+                            <p class="text-gray-700 mb-4">Explore emerging trends in brand identity design and how they're reshaping the way companies connect with audiences.</p>
+                            <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Blog post" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-accent text-white text-xs px-3 py-1 rounded">Marketing</span>
+                                <span class="text-gray-500 text-sm">May 12, 2024</span>
+                            </div>
+                            <h2 class="font-heading text-2xl font-bold uppercase mb-3">DIGITAL MARKETING IN 2024</h2>
+                            <p class="text-gray-700 mb-4">Discover the latest digital marketing strategies that are driving results for forward-thinking brands.</p>
+                            <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="Blog post" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-accent text-white text-xs px-3 py-1 rounded">Strategy</span>
+                                <span class="text-gray-500 text-sm">May 10, 2024</span>
+                            </div>
+                            <h2 class="font-heading text-2xl font-bold uppercase mb-3">BUILDING A CREATIVE STRATEGY</h2>
+                            <p class="text-gray-700 mb-4">Learn how to develop a creative strategy that aligns with your business goals and resonates with your audience.</p>
+                            <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600" alt="Blog post" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-accent text-white text-xs px-3 py-1 rounded">Design</span>
+                                <span class="text-gray-500 text-sm">May 8, 2024</span>
+                            </div>
+                            <h2 class="font-heading text-2xl font-bold uppercase mb-3">MINIMALISM IN WEB DESIGN</h2>
+                            <p class="text-gray-700 mb-4">Why less is more when it comes to modern web design and how to implement minimalist principles effectively.</p>
+                            <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600" alt="Blog post" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-accent text-white text-xs px-3 py-1 rounded">Marketing</span>
+                                <span class="text-gray-500 text-sm">May 5, 2024</span>
+                            </div>
+                            <h2 class="font-heading text-2xl font-bold uppercase mb-3">SOCIAL MEDIA TRENDS</h2>
+                            <p class="text-gray-700 mb-4">Stay ahead of the curve with these emerging social media trends that are changing the marketing landscape.</p>
+                            <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600" alt="Blog post" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="bg-accent text-white text-xs px-3 py-1 rounded">Branding</span>
+                                <span class="text-gray-500 text-sm">May 3, 2024</span>
+                            </div>
+                            <h2 class="font-heading text-2xl font-bold uppercase mb-3">COLOR PSYCHOLOGY IN BRANDING</h2>
+                            <p class="text-gray-700 mb-4">Understanding how color choices impact brand perception and consumer behavior in meaningful ways.</p>
+                            <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="flex justify-center mt-12 gap-2">
+                    <button class="bg-accent text-white px-4 py-2 rounded hover:bg-red-700 transition">1</button>
+                    <button class="bg-white text-dark px-4 py-2 rounded hover:bg-gray-100 transition">2</button>
+                    <button class="bg-white text-dark px-4 py-2 rounded hover:bg-gray-100 transition">3</button>
+                    <button class="bg-white text-dark px-4 py-2 rounded hover:bg-gray-100 transition">Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-dark text-white text-center" data-aos="fade-up">
+            <div class="container mx-auto px-6">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase mb-6">SUBSCRIBE TO OUR NEWSLETTER</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Get the latest insights delivered straight to your inbox.</p>
+                <form class="max-w-md mx-auto flex gap-4">
+                    <input type="email" placeholder="Your email address" class="flex-1 px-6 py-3 rounded text-dark" required aria-label="Email address">
+                    <button type="submit" class="bg-accent px-8 py-3 rounded font-semibold hover:bg-red-700 transition">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-heading text-xl font-bold uppercase mb-4">STUDIOWAVE</h3>
+                    <p class="text-gray-400">Modern marketing and branding agency.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">QUICK LINKS</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                        <li><a href="case-studies.html" class="hover:text-accent transition">Case Studies</a></li>
+                        <li><a href="blog.html" class="hover:text-accent transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">CONTACT</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>123 Creative Street</li>
+                        <li>New York, NY 10001</li>
+                        <li>hello@studiowave.com</li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold uppercase mb-4">FOLLOW US</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Facebook">FB</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Twitter">TW</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="Instagram">IG</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 StudioWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - PortNova</title>
+    <meta name="description" content="Browse my portfolio of creative work including design, photography, and branding projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="PortNova Home">PortNova</a>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="portfolio-page">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Portfolio</h1>
+                
+                <div class="filter-buttons" role="group" aria-label="Filter portfolio items" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn" data-filter="photography">Photography</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+
+                <div class="masonry-grid">
+                    <article class="portfolio-item" data-category="design" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=800&fit=crop" alt="Creative studio workspace" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Brand Identity</h3>
+                            <p>Design</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="photography" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Professional portrait photography" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Portrait Series</h3>
+                            <p>Photography</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="design" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=600&fit=crop" alt="Modern creative office space" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Office Design</h3>
+                            <p>Interior</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="photography" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=700&fit=crop" alt="Creative studio setup" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Studio Setup</h3>
+                            <p>Photography</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="photography" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=500&fit=crop" alt="Professional portrait" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Corporate Portraits</h3>
+                            <p>Photography</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="design" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=650&fit=crop" alt="Creative office environment" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Workspace Design</h3>
+                            <p>Design</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="branding" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&h=750&fit=crop" alt="Branding project" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Tech Startup</h3>
+                            <p>Branding</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="branding" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&h=550&fit=crop" alt="Brand identity design" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Cafe Branding</h3>
+                            <p>Branding</p>
+                        </div>
+                    </article>
+                    <article class="portfolio-item" data-category="design" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=700&fit=crop" alt="Web design project" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Web Interface</h3>
+                            <p>Design</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>PortNova</h3>
+                    <p>Creative design studio specializing in branding, photography, and digital experiences.</p>
+                    <p><strong>Email:</strong> hello@portnova.com<br>
+                    <strong>Phone:</strong> +1 (234) 567-890<br>
+                    <strong>Location:</strong> New York, NY</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Behance">Behance</a>
+                        <a href="#" aria-label="Dribbble">Dribbble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PortNova. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="cookie-policy.html">Cookies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
